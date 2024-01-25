@@ -29,7 +29,7 @@ authors = ["LimpidCrypto"]
 2. Navigate through the instructions until you reach the point where to decide what type of project to create
 3. Select "Saas"
 
-## Edit `.devcontainer/Dockerfile`
+## Edit ".devcontainer/Dockerfile"
 
 1. Open `.devcontainer/Dockerfile`
 2. Replace the content with the following:
@@ -74,13 +74,15 @@ Loco comes with a Vite React frontend. We can delete the whole directory because
 
 1. Run `ng build` to build the Angular frontend
 
-## Edit `config/development.yml`
+## Edit "config/development.yml"
 
 As you may have noticed Angular has built the frontend into `frontend/dist/frontend/browser`. We now need to configure Loco to access the built frontend from there.
 
 1. Open `config/development.yml`
 2. Set the configs to the frontend build path:
+
    a. `server.middlewares.static.folder.path: "frontend/dist/frontend/browser"`
+
    b. `server.middlewares.static.fallback: "frontend/dist/frontend/browser/index.html"`
 
 ## Start Loco
